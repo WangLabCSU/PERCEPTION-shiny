@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PERCEPTIONx – Redirecting…</title>
+  <meta name="description" content="PERCEPTIONx: an interactive web server and R package for predicting drug response from single-cell tumour transcriptomes." />
+
+  <!-- Primary redirect: fastest path, works even with JavaScript disabled -->
+  <meta http-equiv="refresh" content="0; url=http://biotree.top:38124/PERCEPTIONx/" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary:        #165C91;
+      --primary-light:  #2a7eb8;
+      --accent-light:   #e0524a;
+      --bg:             #0b2036;
+      --card:           #123a5c;
+      --text:           #e6eef6;
+      --muted:          #9fb8cc;
+    }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino,
+                   "Book Antiqua", Georgia, Cambria, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header and card share one column width so the wordmark lines up with the
+       card instead of shrink-wrapping to the tagline's own text width. */
+    .header, .card { width: 100%; max-width: 480px; }
+
+    .logo {
+      font-size: 2.1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-align: center;
+    }
+    .logo span { color: var(--accent-light); font-style: italic; }
+    .tagline {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 0.35rem;
+      text-align: center;
+      text-wrap: balance;   /* avoids a one-word orphan line on narrow screens */
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(159, 184, 204, 0.18);
+      border-radius: 0.4rem;
+      padding: 2.25rem 2.5rem;
+      text-align: center;
+    }
+    .spinner {
+      width: 34px;
+      height: 34px;
+      border: 2px solid rgba(159, 184, 204, 0.45);
+      border-top-color: var(--primary-light);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto 1.35rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+
+    /* Both buttons carry a 1px border so they render at the same height;
+       the filled one keeps a light border as its edge against the card. */
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1.3rem;
+      border: 1px solid transparent;
+      border-radius: 0.4rem;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary-light);
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .btn-secondary {
+      background: rgba(159, 184, 204, 0.08);
+      border-color: rgba(159, 184, 204, 0.60);
+      color: var(--muted);
+    }
+    .divider {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--muted);
+      margin: 0.6rem 0;
+    }
+    .label {
+      display: block;
+      font-size: 0.72rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+    footer {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">PERCEPTION<span>x</span></div>
+    <p class="tagline">Drug-response prediction from single-cell tumour transcriptomes</p>
+  </div>
+  <div class="card">
+    <div class="spinner" id="spinner"></div>
+    <h1 id="msg">Redirecting you now…</h1>
+    <p class="sub">You will be taken to the PERCEPTIONx web server automatically.
+If nothing happens, use the links below.</p>
+    <a class="btn btn-primary" href="http://biotree.top:38124/PERCEPTIONx/" id="primary-link">
+      Open PERCEPTIONx
+    </a>
+    <span class="label">Primary server</span>
+    <div class="divider">— backup —</div>
+    <a class="btn btn-secondary" href="https://lisom.work/shinyapps/PERCEPTIONx/">
+      lisom.work mirror
+    </a>
+    <span class="label">Alternative access path</span>
+  </div>
+  <footer>WangLabCSU · PERCEPTIONx</footer>
+  <script>
+    // Redirect immediately, before first paint where possible.
+    (function () {
+      var primary = "http://biotree.top:38124/PERCEPTIONx/";
+      try {
+        window.location.replace(primary);
+      } catch (e) {
+        window.location.href = primary;
+      }
+    })();
+  </script>
+</body>
+</html>
